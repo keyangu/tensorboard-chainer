@@ -67,9 +67,11 @@ def make_grid(tensor, nrow=8, padding=2,
     # make the mini-batch of images into a grid
     nmaps = tensor.shape[0]
     xmaps = min(nrow, nmaps)
-    ymaps = int(math.ceil(float(nmaps) / xmaps))
+    # ymaps = int(math.ceil(float(nmaps) / xmaps))
+    ymaps = xmaps
     height, width = int(tensor.shape[2] + padding), int(tensor.shape[3] + padding)
-    grid = np.ones((3, height * ymaps + 1 + padding // 2, width * xmaps + 1 + padding // 2)) * pad_value
+    # grid = np.ones((3, height * ymaps + 1 + padding // 2, width * xmaps + 1 + padding // 2)) * pad_value
+    grid = np.zeros((3, height * ymaps + 1 + padding // 2, width * xmaps + 1 + padding // 2)) * pad_value
     k = 0
     for y in irange(ymaps):
         for x in irange(xmaps):

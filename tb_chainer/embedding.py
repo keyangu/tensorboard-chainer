@@ -12,7 +12,8 @@ def make_tsv(metadata, save_path):
 # https://github.com/tensorflow/tensorboard/issues/44 image label will be squared
 def make_sprite(label_img, save_path):
     import math
-    nrow = int(math.floor(math.sqrt(label_img.shape[0])))
+    #nrow = int(math.floor(math.sqrt(label_img.shape[0])))
+    nrow = int(math.ceil(math.sqrt(label_img.shape[0])))
     xx = utils.make_grid(np.zeros((1,3,32,32)), padding=0)
     if xx.shape[2]==33: # https://github.com/pytorch/vision/issues/206
         sprite = utils.make_grid(label_img, nrow=nrow, padding=0)
