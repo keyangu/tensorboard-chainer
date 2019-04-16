@@ -1,4 +1,4 @@
-import utils
+from tb_chainer import utils
 import numpy as np
 import os
 
