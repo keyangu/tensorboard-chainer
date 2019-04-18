@@ -1,9 +1,5 @@
-[![Build Status](https://travis-ci.org/neka-nat/tensorboard-chainer.svg?branch=master)](https://travis-ci.org/neka-nat/tensorboard-chainer)
-[![codecov](https://codecov.io/gh/neka-nat/tensorboard-chainer/branch/master/graph/badge.svg)](https://codecov.io/gh/neka-nat/tensorboard-chainer)
-
-[![Code Climate](https://codeclimate.com/github/neka-nat/tensorboard-chainer/badges/gpa.svg)](https://codeclimate.com/github/neka-nat/tensorboard-chainer)
-
-[![PyPI version](https://badge.fury.io/py/tensorboard-chainer.svg)](https://badge.fury.io/py/tensorboard-chainer)
+fork元のプロジェクトで出力したembeddingが現在のTensorBoard(1.13.1)で正しくlabel_imgを読み込めていなかったので微修正。
+それ以外の詳細はfork元をご参照ください。
 
 # tensorboard-chainer
 
